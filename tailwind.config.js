@@ -6,6 +6,10 @@ module.exports = {
   ],
   // Ensure these match with .storybook/preview.js
   theme: {
+    fontFamily: {
+      sans: ['Roboto'],
+      roboto: ['Roboto', 'sans-serif'],
+    },
     extend: {
       colors: {
         'my-custom-color': '#fffff',
