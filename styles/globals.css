@@ -4,6 +4,7 @@
 
 @layer base {
   body {
+    box-sizing: border-box;
     @apply font-roboto;
   }
 }
