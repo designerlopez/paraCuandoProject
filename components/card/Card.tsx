@@ -9,11 +9,11 @@ function Card({ title, description, image, url }: CardData) {
   }
 
   return (
-    <article className="article flex-col bg-green-600 w-[299px] h-[454px] rounded-lg m-3 overflow-hidden relative">
-      <section
+    <article className="article flex-col w-[299px] h-[454px] rounded-lg m-3 shadow-md overflow-hidden relative">
+      <div
         className="img bg-cover bg-no-repeat bg-center w-full h-60 rounded-t-lg"
-        style={{ backgroundImage: `url(${image})` }}
-      ></section>
+        style={{ backgroundImage: `url(${image.src})` }}
+      />
       <i className="absolute right-6 bottom-52" onClick={handleLike}>
         ❤ {likes}
       </i>

@@ -7,25 +7,29 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import Card from './card/Card';
 import CardData from './CardData';
 
+import bts from '../public/images/bts.png';
+import gaga from '../public/images/gaga.png';
+import zara from '../public/images/zara.png';
+
 SwiperCore.use([Autoplay, EffectFade]);
 
 const data: CardData[] = [
   {
-    title: 'Title 1',
-    description: 'Description 1',
-    image: 'https://via.placeholder.com/300',
-    url: 'https://www.example.com',
+    title: 'Concierto de Lady Gaga',
+    description: 'El concierto con la temática de Lady Gaga en las Vegas',
+    image: gaga,
+    url: 'ladygaga.com',
   },
   {
-    title: 'Title 2',
+    title: 'Tienda de ropa femenina ZARA',
     description: 'Description 2',
-    image: 'https://via.placeholder.com/300',
+    image: zara,
     url: 'https://www.example.com',
   },
   {
     title: 'Title 3',
     description: 'Description 3',
-    image: 'https://via.placeholder.com/300',
+    image: bts,
     url: 'https://www.example.com',
   },
 ];
