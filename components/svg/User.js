@@ -1,4 +1,4 @@
-export default function user(props) {
+export default function User(props) {
   return (
     <svg
       width={17}
