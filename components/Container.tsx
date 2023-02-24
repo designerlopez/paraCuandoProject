@@ -25,17 +25,17 @@ export default function Container() {
           Selecciona tus intereses para brindarte sugerencia de acuerdo a tus
           gustos
         </p>
-        <div className="flex gap-4">
-          <button className="flex items-center justify-center rounded-full bg-white w-[115px] h-[45px] py-[15px] px-[15px]">
-            Restaurantes
-          </button>
-          <button className="flex items-center justify-center rounded-full bg-white w-[115px] h-[45px] py-[15px] px-[15px]">
-            Tiendas de ropa
-          </button>
-          <button className="flex items-center justify-center rounded-full bg-white w-[115px] h-[45px] py-[15px] px-[15px]">
-            Rock
-          </button>
-        </div>
+        <div className="flex flex-wrap gap-4">
+    <button className="flex items-center justify-center rounded-full bg-white w-full md:w-[115px] h-[45px] py-[15px] px-[15px]">
+      Restaurantes
+    </button>
+    <button className="flex items-center justify-center rounded-full bg-white w-full md:w-[115px] h-[45px] py-[15px] px-[15px]">
+      Tiendas de ropa
+    </button>
+    <button className="flex items-center justify-center rounded-full bg-white w-full md:w-[115px] h-[45px] py-[15px] px-[15px]">
+      Rock
+    </button>
+  </div>
         <a href="">Ver todos los intereses </a>
       </section>
       <section className="Recently_Seen">
