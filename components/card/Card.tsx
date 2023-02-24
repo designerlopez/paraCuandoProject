@@ -1,11 +1,15 @@
 import { useState } from 'react';
 import CardData from '../CardData';
+import HeartEmpty from '../svg/HeartEmpty';
+import HeartFull from '../svg/heartFull';
 
-function Card({ title, description, image, url }: CardData) {
+export default function Card({ title, description, image, url }: CardData) {
   const [likes, setLikes] = useState(0);
+  const [isLiked, setIsLiked] = useState(false);
 
   function handleLike() {
     setLikes(likes + 1);
+    setIsLiked(!isLiked);
   }
 
   return (
@@ -14,22 +18,26 @@ function Card({ title, description, image, url }: CardData) {
         className="img bg-cover bg-no-repeat bg-center w-full h-60 rounded-t-lg"
         style={{ backgroundImage: `url(${image.src})` }}
       />
-      <i className="absolute right-6 bottom-52" onClick={handleLike}>
-        ❤ {likes}
+
+      <i
+        className="absolute top-[200px] right-2 cursor-pointer"
+        onClick={handleLike}
+      >
+        {isLiked ? <HeartFull /> : <HeartEmpty />}
       </i>
-      <section className="description p-2 pt-0 px-2">
-        <div className="title font-bold text-lg">{title}</div>
-        <div className="w-[254px] h-[72px] text-sm text-gray-700">
+      <section className="description p-2 pt-0 px-2 relative">
+        <div className="title font-bold text-lg w-[215px]">{title}</div>
+        <div className="w-[215px] text-sm text-gray-700 bg-blue-300">
           {description}
         </div>
-        <div className="url text-sm text-blue-600">{url}</div>
-        <div>
-          <i>👦</i>
-          <p>90.800.756</p>
+        <div className="page_votos absolute top-36 pb-2">
+          <div className="url text-sm text-blue-600">{url}</div>
+          <div className="flex">
+            <i>👦</i>
+            <p>90.800.756</p>
+          </div>
         </div>
       </section>
     </article>
   );
 }
-
-export default Card;
