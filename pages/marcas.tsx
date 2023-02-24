@@ -1,12 +1,13 @@
-import Layout from '@/components/Layout';
-import { NextPageWithLayout } from './page';
+import Home_marcas from '@/components/Home_marcas';
+import { getLayout } from '@/components/Layout';
 
-const marcas: NextPageWithLayout = () => {
-  return <div>hola soy la pagina de marcas</div>;
-};
+export default function Marcas() {
+  return (
+    <>
+      <Home_marcas />
+    </>
+  );
+}
 
-export default marcas;
-
-marcas.getLayout = (page) => {
-  return <Layout>{page}</Layout>;
-};
+// Asigna la función getLayout a la página de inicio
+Marcas.getLayout = getLayout;

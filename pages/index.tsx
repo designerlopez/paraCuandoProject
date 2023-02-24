@@ -1,5 +1,5 @@
 import Container from '@/components/Container';
-import Home_page from '@/components/Home';
+import Home_page from '@/components/Home_page';
 import { getLayout } from '@/components/Layout';
 
 export default function Home() {
