@@ -6,6 +6,7 @@ import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Card from './card/Card';
 import CardData from './CardData';
+import React, { useRef } from 'react';
 
 import bts from '../public/images/bts.png';
 import ecoalf from '../public/images/ecoalf.png';
@@ -13,7 +14,7 @@ import gaga from '../public/images/gaga.png';
 import selina from '../public/images/selina.png';
 import zara from '../public/images/zara.png';
 
-SwiperCore.use([Autoplay, EffectFade]);
+SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 const data: CardData[] = [
   {
@@ -62,9 +63,43 @@ const swiperOptions = {
 };
 
 function ContainerCard() {
-  return (
-    <div className="flex flex-wrap justify-center">
-      <Swiper slidesPerView={3} spaceBetween={1}>
+  const swiperRef = useRef<SwiperCore | null>(null);
+
+  const handlePrevSlide = () => {
+    swiperRef.current?.slidePrev();
+  };
+
+  const handleNextSlide = () => {
+    swiperRef.current?.slideNext();
+  };
+  
+  
+  return  return (
+    <div className="relative">
+      <div className="swiper-button-prev" onClick={handlePrevSlide}>
+        &#60;
+      </div>
+      <div className="swiper-button-next" onClick={handleNextSlide}>
+        &#62;
+      </div>
+      <Swiper
+        spaceBetween={20}
+        slidesPerView={3}
+        slidesPerGroup={3}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+          },
+        }}
+        navigation={{
+          prevEl: '.swiper-button-prev',
+          nextEl: '.swiper-button-next',
+        }}
+        autoplay={{ delay: 3000 }}
+        loop={true}
+        ref={swiperRef}
+      >
         {data.map((card) => (
           <SwiperSlide key={card.title}>
             <Card {...card} />
@@ -74,5 +109,13 @@ function ContainerCard() {
     </div>
   );
 }
+
+export default ContainerCard;
+
+
+
+
+
+
 
 export default ContainerCard;
