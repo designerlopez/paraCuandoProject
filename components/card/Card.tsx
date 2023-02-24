@@ -33,7 +33,8 @@ export default function Card({ title, description, image, url }: CardData) {
         <div className="page_votos absolute top-36 pb-2">
           <div className="url text-sm text-blue-600">{url}</div>
           <div className="flex">
-            <i>👦</i>
+            <i></i>
+
             <p>90.800.756</p>
           </div>
         </div>

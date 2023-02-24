@@ -1,8 +1,8 @@
 export default function nextTallBlue(props) {
   return (
     <svg
-      width="1em"
-      height="1em"
+      width={307}
+      height={47}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
