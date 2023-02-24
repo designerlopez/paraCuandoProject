@@ -6,7 +6,6 @@ import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Card from './card/Card';
 import CardData from './CardData';
-import React, { useRef } from 'react';
 
 import bts from '../public/images/bts.png';
 import ecoalf from '../public/images/ecoalf.png';
@@ -14,7 +13,7 @@ import gaga from '../public/images/gaga.png';
 import selina from '../public/images/selina.png';
 import zara from '../public/images/zara.png';
 
-SwiperCore.use([Navigation, Pagination, Autoplay]);
+SwiperCore.use([Autoplay, EffectFade]);
 
 const data: CardData[] = [
   {
@@ -53,8 +52,33 @@ const data: CardData[] = [
 ];
 
 const swiperOptions = {
-  slidesPerView: 3,
-  spaceBetween: 10,
+  breakpoints: {
+    // when window width is >= 0px
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 40,
+    },
+    // when window width is >= 330px
+    330: {
+      slidesPerView: 1.2,
+      spaceBetween: 40,
+    },
+    // when window width is >= 600px
+    600: {
+      slidesPerView: 1.8,
+      spaceBetween: 30,
+    },
+    // when window width is >= 900px
+    900: {
+      slidesPerView: 2.1,
+      spaceBetween: 30,
+    },
+    // when window width is >= 1200px
+    1200: {
+      slidesPerView: 3.2,
+      spaceBetween: 20,
+    },
+  },
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
@@ -63,85 +87,17 @@ const swiperOptions = {
 };
 
 function ContainerCard() {
-  const swiperRef = useRef<SwiperCore | null>(null);
-
-  const handlePrevSlide = () => {
-    swiperRef.current?.slidePrev();
-  };
-
-  const handleNextSlide = () => {
-    swiperRef.current?.slideNext();
-  };
-  
-  .swiper-container-container {
-  position: relative;
-}
-.swiper-button-prev,
-.swiper-button-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  width: 30px;
-  height: 30px;
-  background-color: white;
-  border-radius: 50%;
-  color: black;
-  font-size: 1.5rem;
-  text-align: center;
-  line-height: 1.5rem;
-  cursor: pointer;
-}
-.swiper-button-prev {
-  left: 0;
-}
-.swiper-button-next {
-  right: 0;
-}
-.swiper-container {
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-}
-
-  
-  
-   return (
-    <div className="swiper-container-container">
-  <div className="swiper-container">
-    <Swiper
-      spaceBetween={20}
-      slidesPerView={3}
-      slidesPerGroup={3}
-      breakpoints={{
-        640: {
-          slidesPerView: 1,
-          slidesPerGroup: 1,
-        },
-      }}
-      autoplay={{ delay: 3000 }}
-      loop={true}
-      ref={swiperRef}
-    >
-      {data.map((card) => (
-        <SwiperSlide key={card.title}>
-          <Card {...card} />
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  </div>
-  <div className="swiper-button-prev" onClick={handlePrevSlide}>
-    &#60;
-  </div>
-  <div className="swiper-button-next" onClick={handleNextSlide}>
-    &#62;
-  </div>
-</div>
-
+  return (
+    <div className="flex flex-wrap justify-center">
+      <Swiper {...swiperOptions}>
+        {data.map((card) => (
+          <SwiperSlide key={card.title}>
+            <Card {...card} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
   );
 }
 
 export default ContainerCard;
-
-
-
