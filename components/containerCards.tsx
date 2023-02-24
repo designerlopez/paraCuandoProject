@@ -74,7 +74,7 @@ function ContainerCard() {
   };
   
   
-  return  return (
+   return (
     <div className="relative">
       <div className="swiper-button-prev" onClick={handlePrevSlide}>
         &#60;
