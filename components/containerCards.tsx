@@ -73,40 +73,71 @@ function ContainerCard() {
     swiperRef.current?.slideNext();
   };
   
+  .swiper-container-container {
+  position: relative;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  color: black;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 1.5rem;
+  cursor: pointer;
+}
+.swiper-button-prev {
+  left: 0;
+}
+.swiper-button-next {
+  right: 0;
+}
+.swiper-container {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+  
   
    return (
-    <div className="relative">
-      <div className="swiper-button-prev" onClick={handlePrevSlide}>
-        &#60;
-      </div>
-      <div className="swiper-button-next" onClick={handleNextSlide}>
-        &#62;
-      </div>
-      <Swiper
-        spaceBetween={20}
-        slidesPerView={3}
-        slidesPerGroup={3}
-        breakpoints={{
-          640: {
-            slidesPerView: 1,
-            slidesPerGroup: 1,
-          },
-        }}
-        navigation={{
-          prevEl: '.swiper-button-prev',
-          nextEl: '.swiper-button-next',
-        }}
-        autoplay={{ delay: 3000 }}
-        loop={true}
-        ref={swiperRef}
-      >
-        {data.map((card) => (
-          <SwiperSlide key={card.title}>
-            <Card {...card} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+    <div className="swiper-container-container">
+  <div className="swiper-container">
+    <Swiper
+      spaceBetween={20}
+      slidesPerView={3}
+      slidesPerGroup={3}
+      breakpoints={{
+        640: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+        },
+      }}
+      autoplay={{ delay: 3000 }}
+      loop={true}
+      ref={swiperRef}
+    >
+      {data.map((card) => (
+        <SwiperSlide key={card.title}>
+          <Card {...card} />
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </div>
+  <div className="swiper-button-prev" onClick={handlePrevSlide}>
+    &#60;
+  </div>
+  <div className="swiper-button-next" onClick={handleNextSlide}>
+    &#62;
+  </div>
+</div>
+
   );
 }
 
