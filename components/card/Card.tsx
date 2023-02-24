@@ -2,6 +2,7 @@ import { useState } from 'react';
 import CardData from '../CardData';
 import HeartEmpty from '../svg/HeartEmpty';
 import HeartFull from '../svg/heartFull';
+import User from '../svg/user';
 
 export default function Card({ title, description, image, url }: CardData) {
   const [likes, setLikes] = useState(0);
@@ -27,13 +28,13 @@ export default function Card({ title, description, image, url }: CardData) {
       </i>
       <section className="description p-2 pt-0 px-2 relative">
         <div className="title font-bold text-lg w-[215px]">{title}</div>
-        <div className="w-[215px] text-sm text-gray-700 bg-blue-300">
-          {description}
-        </div>
+        <div className="w-[215px] text-sm text-gray-700">{description}</div>
         <div className="page_votos absolute top-36 pb-2">
           <div className="url text-sm text-blue-600">{url}</div>
-          <div className="flex">
-            <i></i>
+          <div className="flex gap-1">
+            <i>
+              <User />
+            </i>
 
             <p>90.800.756</p>
           </div>

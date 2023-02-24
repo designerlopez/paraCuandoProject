@@ -26,7 +26,7 @@ const data: CardData[] = [
     title: 'Tienda de ropa femenina ZARA',
     description: 'Tienda de ropa',
     image: zara,
-    url: 'https://www.example.com',
+    url: 'https://www.zara.com',
   },
   {
     title: 'Concierto de BTS',
@@ -47,7 +47,7 @@ const data: CardData[] = [
     description:
       'Marca española de prendas y accesorios, elaborando  como materia prima, diversos tipos de desechos',
     image: ecoalf,
-    url: 'selina.com',
+    url: 'ecoalf.com',
   },
 ];
 
