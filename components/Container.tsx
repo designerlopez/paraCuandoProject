@@ -2,7 +2,7 @@ import ContainerCard from './containerCards';
 
 export default function Container() {
   return (
-    <div className="todo mx-44 my-0">
+    <div className="todo mx-2 sm:mx-44 my-0">
       <section className="Popular bg-green-300 my-8">
         <div className="Popular_content ">
           <h3 className="bg-blue-300 m-2 p-2">Populares en Queretaro</h3>
