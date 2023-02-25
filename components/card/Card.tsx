@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import CardData from '../CardData';
 import HeartEmpty from '../svg/HeartEmpty';
-import HeartFull from '../svg/heartFull';
+import HeartFull from '../svg/HeartFull';
 import User from '../svg/User';
 
 export default function Card({ title, description, image, url }: CardData) {
