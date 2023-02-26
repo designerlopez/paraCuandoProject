@@ -1,4 +1,4 @@
-export default function heartFull(props) {
+export default function HeartFull(props) {
   return (
     <svg
       width={49}
