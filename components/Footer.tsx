@@ -1,3 +1,5 @@
+import Lupa from './svg/Lupa';
+
 const Footer = () => {
   return (
     <div className="footer flex justify-center bg-[url('../public/images/footer.png')] bg-cover bg-no-repeat bg-center h-screen max-h-80 bottom-0">
@@ -8,7 +10,7 @@ const Footer = () => {
           placeholder="¿Qué quieres ver en tu ciudad?"
         />
         <p className="input_text absolute -inset-y-0 right-1 flex items-center">
-          🔍
+          <Lupa />
         </p>
       </div>
     </div>
