@@ -7,9 +7,9 @@ const Footer = () => {
           type="text"
           placeholder="¿Qué quieres ver en tu ciudad?"
         />
-        <button className="input_text absolute -inset-y-0 right-1 flex items-center">
+        <p className="input_text absolute -inset-y-0 right-1 flex items-center">
           🔍
-        </button>
+        </p>
       </div>
     </div>
   );

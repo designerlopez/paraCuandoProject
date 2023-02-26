@@ -3,7 +3,7 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import Card from './card/Card';
 import CardData from './CardData';
 
@@ -88,8 +88,14 @@ const swiperOptions = {
 
 function ContainerCard() {
   return (
-    <div className="flex flex-wrap justify-center">
-      <Swiper {...swiperOptions}>
+    <div className="flex flex-wrap justify-center relative">
+      <Swiper style={{ position: 'unset' }} {...swiperOptions}>
+        <div className="absolute top-40 -right-10 z-40 hidden  sm:block">
+          <NextSlide />
+        </div>
+        <div className="absolute top-40 -left-10 z-40 hidden sm:block">
+          <BackSlide />
+        </div>
         {data.map((card) => (
           <SwiperSlide key={card.title}>
             <Card {...card} />
@@ -99,5 +105,15 @@ function ContainerCard() {
     </div>
   );
 }
+
+const BackSlide = () => {
+  const swiper = useSwiper();
+  return <button onClick={() => swiper.slidePrev()}>Back</button>;
+};
+
+const NextSlide = () => {
+  const swiper = useSwiper();
+  return <button onClick={() => swiper.slideNext()}>Next</button>;
+};
 
 export default ContainerCard;

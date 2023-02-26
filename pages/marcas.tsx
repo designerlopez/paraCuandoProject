@@ -1,3 +1,4 @@
+import Container from '@/components/Container';
 import Home_marcas from '@/components/Home_marcas';
 import { getLayout } from '@/components/Layout';
 
@@ -5,6 +6,7 @@ export default function Marcas() {
   return (
     <>
       <Home_marcas />
+      <Container />
     </>
   );
 }

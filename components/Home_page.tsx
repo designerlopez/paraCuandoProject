@@ -1,6 +1,6 @@
 export default function Home_page() {
   return (
-    <div className="flex justify-center bg-[url('../public/images/home.png')] bg-cover bg-no-repeat bg-center h-96">
+    <div className="flex justify-center bg-[url('/images/home.png')] bg-cover bg-no-repeat bg-center h-96">
       <div className="mx-4 sm:mx-0 grid place-items-center sm:p-0">
         <div className="bg-[url('../public/images/brand.png')] bg-center bg-no-repeat w-72 h-52 m-0"></div>
         <div className="m-0  relative flex items-center">
@@ -9,9 +9,9 @@ export default function Home_page() {
             type="text"
             placeholder="¿Qué quieres ver en tu ciudad?"
           />
-          <button className="input_text absolute -inset-y-0 right-1 flex items-center">
+          <p className="input_text absolute -inset-y-0 right-1 flex items-center">
             🔍
-          </button>
+          </p>
         </div>
         <div className="options-buttons flex gap-2 sm:gap-4">
           <button className="bg-white rounded-full p-2 sm:p-3 text-sm sm:text-base">
