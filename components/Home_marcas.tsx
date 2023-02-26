@@ -1,3 +1,5 @@
+import Lupa from './svg/Lupa';
+
 export default function Home_marcas() {
   return (
     <div className="home_marcas-container ">
@@ -23,7 +25,7 @@ export default function Home_marcas() {
             placeholder="¿Qué quieres ver en tu ciudad?"
           />
           <p className="input_text absolute -inset-y-0 right-1 flex items-center">
-            🔍
+            <Lupa />
           </p>
         </div>
       </div>
