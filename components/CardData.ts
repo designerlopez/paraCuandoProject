@@ -5,6 +5,7 @@ interface CardData {
   description: string;
   image: StaticImageData;
   url: string;
+  likesDB: number;
 }
 
 export default CardData;

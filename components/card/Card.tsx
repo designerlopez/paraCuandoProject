@@ -4,8 +4,14 @@ import HeartEmpty from '../svg/HeartEmpty';
 import HeartFull from '../svg/heartLleno';
 import User from '../svg/User';
 
-export default function Card({ title, description, image, url }: CardData) {
-  const [likes, setLikes] = useState(0);
+export default function Card({
+  title,
+  description,
+  image,
+  url,
+  likesDB,
+}: CardData) {
+  const [likes, setLikes] = useState(likesDB);
   const [isLiked, setIsLiked] = useState(false);
 
   function handleLike() {
@@ -36,7 +42,7 @@ export default function Card({ title, description, image, url }: CardData) {
               <User />
             </i>
 
-            <p>90.800.756</p>
+            <p>{likesDB}</p>
           </div>
         </div>
       </section>

@@ -17,7 +17,7 @@ export default function Home_page() {
           </p>
         </div>
         <div className="options-buttons flex gap-2 sm:gap-4">
-          <Link href="../marcas">
+          <Link href="../categories">
             <button className="bg-white rounded-full p-2 sm:p-3 text-sm sm:text-base">
               Marcas y accesorios
             </button>

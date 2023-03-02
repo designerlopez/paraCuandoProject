@@ -7,9 +7,11 @@ import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import Card from './card/Card';
 import CardData from './CardData';
 
+import Next from '../components/svg/next';
 import bts from '../public/images/bts.png';
 import ecoalf from '../public/images/ecoalf.png';
 import gaga from '../public/images/gaga.png';
+import lol from '../public/images/lol.png';
 import selina from '../public/images/selina.png';
 import zara from '../public/images/zara.png';
 
@@ -21,18 +23,21 @@ const data: CardData[] = [
     description: 'El concierto con la temática de Lady Gaga en las Vegas',
     image: gaga,
     url: 'ladygaga.com',
+    likesDB: 945.555,
   },
   {
     title: 'Tienda de ropa femenina ZARA',
     description: 'Tienda de ropa',
     image: zara,
     url: 'https://www.zara.com',
+    likesDB: 305.0,
   },
   {
     title: 'Concierto de BTS',
     description: 'Grupo musical coreano',
     image: bts,
     url: 'bts.com',
+    likesDB: 850512,
   },
 
   {
@@ -40,6 +45,7 @@ const data: CardData[] = [
     description: 'Hotel que te permite hospedarte, trabajar, y comer',
     image: selina,
     url: 'selina.com',
+    likesDB: 850533,
   },
 
   {
@@ -48,6 +54,15 @@ const data: CardData[] = [
       'Marca española de prendas y accesorios, elaborando  como materia prima, diversos tipos de desechos',
     image: ecoalf,
     url: 'ecoalf.com',
+    likesDB: 945.0,
+  },
+
+  {
+    title: 'League of Legends',
+    description: 'Campeonato de League of Legends 2025',
+    image: lol,
+    url: 'leagueoflegends.com',
+    likesDB: 985.555,
   },
 ];
 
@@ -108,12 +123,20 @@ function ContainerCard() {
 
 const BackSlide = () => {
   const swiper = useSwiper();
-  return <button onClick={() => swiper.slidePrev()}>Back</button>;
+  return (
+    <button onClick={() => swiper.slidePrev()}>
+      <Next />
+    </button>
+  );
 };
 
 const NextSlide = () => {
   const swiper = useSwiper();
-  return <button onClick={() => swiper.slideNext()}>Next</button>;
+  return (
+    <button onClick={() => swiper.slideNext()}>
+      <Next />
+    </button>
+  );
 };
 
 export default ContainerCard;
