@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import Card from './card/Card';
 import CardData from './CardData';
 
-import Next from '../components/svg/next';
+import Next from '../components/svg/Flecha';
 import bts from '../public/images/bts.png';
 import ecoalf from '../public/images/ecoalf.png';
 import gaga from '../public/images/gaga.png';
@@ -80,17 +80,17 @@ const swiperOptions = {
     },
     // when window width is >= 600px
     600: {
-      slidesPerView: 1.8,
-      spaceBetween: 30,
+      slidesPerView: 1,
+      spaceBetween: 80,
     },
     // when window width is >= 900px
     900: {
       slidesPerView: 2.1,
-      spaceBetween: 30,
+      spaceBetween: 100,
     },
     // when window width is >= 1200px
     1200: {
-      slidesPerView: 3.2,
+      slidesPerView: 3,
       spaceBetween: 20,
     },
   },
@@ -108,7 +108,7 @@ function ContainerCard() {
         <div className="absolute top-40 -right-10 z-40 hidden  sm:block">
           <NextSlide />
         </div>
-        <div className="absolute top-40 -left-10 z-40 hidden sm:block">
+        <div className="absolute top-40 -left-10 z-40 hidden sm:block rotate-180">
           <BackSlide />
         </div>
         {data.map((card) => (
