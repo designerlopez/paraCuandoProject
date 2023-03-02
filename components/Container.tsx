@@ -5,8 +5,8 @@ export default function Container() {
     <div className="todo mx-2 sm:mx-44 my-0">
       <section className="Popular my-8">
         <div className="Popular_content ">
-          <h3 className=" m-2 p-2">Populares en Queretaro</h3>
-          <p className=" m-2 p-2">Lo que las personas piden más</p>
+          <h3 className=" m-2 p-2 ">Populares en Queretaro</h3>
+          <p className=" m-2 p-2 ">Lo que las personas piden más</p>
           <ContainerCard />
         </div>
       </section>
@@ -17,24 +17,26 @@ export default function Container() {
           <ContainerCard />
         </div>
       </section>
-      <section className="Interest my-8 px-16 py-2 bg-app-gray">
-        <h2> Hagamoslo mas personal</h2>
-        <p>
+      <section className="Interest my-8 px-2 py-2 bg-[#F8F7FA]">
+        <h3 className="m-2"> Hagamoslo mas personal</h3>
+        <p className="m-2">
           Selecciona tus intereses para brindarte sugerencia de acuerdo a tus
           gustos
         </p>
-        <div className="flex flex-wrap gap-4">
-          <button className="flex items-center justify-center rounded-full bg-white w-full md:w-[115px] h-[45px] py-[15px] px-[15px]">
+        <div className="options-buttons flex gap-2 mt-2 mb-10 ">
+          <button className="bg-white rounded-full text-sm ">
             Restaurantes
           </button>
-          <button className="flex items-center justify-center rounded-full bg-white w-full md:w-[115px] h-[45px] py-[15px] px-[15px]">
+
+          <button className="bg-white rounded-full text-sm">
             Tiendas de ropa
           </button>
-          <button className="flex items-center justify-center rounded-full bg-white w-full md:w-[115px] h-[45px] py-[15px] px-[15px]">
-            Rock
-          </button>
+
+          <button className="bg-white rounded-full text-sm">Rock</button>
         </div>
-        <a href="">Ver todos los intereses </a>
+        <a href="" className="m-2">
+          Ver todos los intereses{' '}
+        </a>
       </section>
       <section className="Recently_Seen">
         <div className="Recently_Seen_content">
