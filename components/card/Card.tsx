@@ -20,7 +20,7 @@ export default function Card({
   }
 
   return (
-    <article className="article flex-col w-[299px] h-[454px] rounded-lg m-3 shadow-md overflow-hidden relative">
+    <article className="article flex flex-col w-[299px] h-[454px] rounded-lg m-3 shadow-md overflow-hidden relative mx-7">
       <div
         className="img bg-cover bg-no-repeat bg-center w-full h-60 rounded-t-lg"
         style={{ backgroundImage: `url(${image.src})` }}

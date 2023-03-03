@@ -85,12 +85,17 @@ const swiperOptions = {
     },
     // when window width is >= 900px
     900: {
-      slidesPerView: 2,
+      slidesPerView: 2.5,
       spaceBetween: 30,
     },
     // when window width is >= 1200px
-    1200: {
+    1285: {
       slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    // when window width is >= 1300px
+    1300: {
+      slidesPerView: 4.2,
       spaceBetween: 20,
     },
   },
@@ -105,10 +110,10 @@ function ContainerCard() {
   return (
     <div className="flex flex-wrap justify-center relative">
       <Swiper style={{ position: 'unset' }} {...swiperOptions}>
-        <div className="absolute top-40 -right-10 z-40 hidden  sm:block">
+        <div className="absolute top-40 -right-28 z-40 hidden  sm:block">
           <NextSlide />
         </div>
-        <div className="absolute top-40 -left-10 z-40 hidden sm:block rotate-180">
+        <div className="absolute top-40 -left-20 z-40 hidden sm:block rotate-180">
           <BackSlide />
         </div>
         {data.map((card) => (

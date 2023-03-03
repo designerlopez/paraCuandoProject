@@ -2,7 +2,7 @@ import ContainerCard from './containerCards';
 
 export default function Container() {
   return (
-    <div className="todo mx-2 sm:mx-44 my-0">
+    <div className="todo  my-0 max-w-[1280px] mx-auto ">
       <section className="Popular my-8">
         <div className="Popular_content ">
           <h3 className=" m-2 p-2 ">Populares en Queretaro</h3>
@@ -35,7 +35,7 @@ export default function Container() {
           <button className="bg-white rounded-full text-sm">Rock</button>
         </div>
         <a href="" className="m-2">
-          Ver todos los intereses{' '}
+          Ver todos los intereses
         </a>
       </section>
       <section className="Recently_Seen">

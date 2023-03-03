@@ -4,10 +4,10 @@ import { getLayout } from '@/components/Layout';
 
 export default function Home() {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Home_page></Home_page>
       <Container />
-    </>
+    </div>
   );
 }
 
