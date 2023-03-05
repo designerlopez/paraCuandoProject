@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import IconLogo from '../public/IconLogo';
+import AllVote from './AllVote';
 
 export default function Header() {
   return (
@@ -21,6 +22,7 @@ export default function Header() {
           <p className="options_2">Sign Up</p>
         </Link>
       </div>
+      <AllVote />
     </div>
   );
 }

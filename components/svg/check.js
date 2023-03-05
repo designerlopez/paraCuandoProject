@@ -1,4 +1,4 @@
-export default function check(props){
+export default function Check(props) {
   return (
     <svg
       width={24}
@@ -12,5 +12,5 @@ export default function check(props){
         fill="#F3F243"
       />
     </svg>
-  )
+  );
 }

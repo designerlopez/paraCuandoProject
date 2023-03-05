@@ -1,4 +1,4 @@
-export default function eye(props){
+export default function Eyes(props) {
   return (
     <svg
       width={23}
@@ -12,5 +12,5 @@ export default function eye(props){
         fill="#F8F7FA"
       />
     </svg>
-  )
+  );
 }

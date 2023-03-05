@@ -22,6 +22,7 @@ module.exports = {
         'app-grayLight': '#D9D9D9',
         'app-grayLighter': '#F8F7FA',
         'app-red': '#EF3F47',
+        'app-gray-form': 'rgba(0, 0, 0, 0.8)',
       },
       screens: {
         xs: '375px',

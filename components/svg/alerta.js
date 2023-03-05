@@ -1,4 +1,4 @@
-export default function alerta(props){
+export default function Alerta(props) {
   return (
     <svg
       width={24}
@@ -12,5 +12,5 @@ export default function alerta(props){
         fill="#EF3F47"
       />
     </svg>
-  )
+  );
 }

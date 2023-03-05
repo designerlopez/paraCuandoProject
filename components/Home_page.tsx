@@ -3,7 +3,7 @@ import Lupa from './svg/Lupa';
 
 export default function Home_page() {
   return (
-    <div className="flex justify-center bg-[url('/images/home.png')] bg-cover bg-no-repeat bg-center h-96 ">
+    <div className="flex justify-center bg-[url('/images/home.png')] bg-cover bg-no-repeat bg-center h-[488px] ">
       <div className="mx-4 sm:mx-0 grid place-items-center sm:p-0">
         <div className="bg-[url('../public/images/brand.png')] bg-center bg-no-repeat w-72 h-52 m-0"></div>
         <div className="m-0  relative flex items-center w-[350px] sm:w-[435px]">

@@ -1,4 +1,4 @@
-export default function eyesSlash(props){
+export default function eyesSlash(props) {
   return (
     <svg
       width={26}
@@ -19,5 +19,5 @@ export default function eyesSlash(props){
         </clipPath>
       </defs>
     </svg>
-  )
+  );
 }
