@@ -1,4 +1,6 @@
-export default function eyesSlash(props) {
+import { SVGProps } from 'react';
+
+export default function eyesSlash(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={26}

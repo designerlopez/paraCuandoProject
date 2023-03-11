@@ -1,4 +1,6 @@
-export default function HeartFull(props) {
+import { SVGProps } from 'react';
+
+export default function HeartFull(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={49}
