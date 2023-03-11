@@ -1,4 +1,4 @@
-export default function Alerta(props) {
+export default function Alerta(props: any) {
   return (
     <svg
       width={24}
