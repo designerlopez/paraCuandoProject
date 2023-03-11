@@ -79,18 +79,11 @@ const swiperOptions = {
       spaceBetween: 20,
     },
     // when window width is >= 600px
-    700: {
-      slidesPerView: 1.5,
-      spaceBetween: 20,
-    },
+    700: {},
     // when window width is >= 900px
-    900: {
-      slidesPerView: 2.5,
-      spaceBetween: 30,
-    },
+    900: {},
     // when window width is >= 1200px
     1285: {
-      slidesPerView: 3,
       spaceBetween: 20,
     },
     // when window width is >= 1300px
