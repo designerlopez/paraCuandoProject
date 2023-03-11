@@ -25,7 +25,7 @@ export default function LoginCard() {
         <CircleAspa />
       </div>
 
-      <div className=" bg-app-gray-form h-[529px] w-[557px] m-0 p-0 rounded-[20px] opacity-90 relative">
+      <div className=" bg-app-gray-form w-[360px]  h-[529px]   rounded-[20px] opacity-90 relative   lg:w-[500px]">
         <div className="grid gap-3 m-4 mx-8 w-[80%]">
           <div>
             <h2 className="font-roboto text-white text-2xl not-italic leading-10 font-bold">

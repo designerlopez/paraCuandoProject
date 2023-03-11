@@ -1,4 +1,6 @@
-export default function Alerta(props: any) {
+import { SVGProps } from 'react';
+
+export default function Alerta(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={24}
