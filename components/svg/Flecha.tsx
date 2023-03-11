@@ -1,4 +1,6 @@
-export default function next(props) {
+import { SVGProps } from 'react';
+
+export default function next(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="59"
@@ -6,6 +8,7 @@ export default function next(props) {
       viewBox="0 0 59 59"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M29.5 14.75L26.8634 17.3183L37.1516 27.6562H14.75V31.3438H37.1516L26.8634 41.619L29.5 44.25L44.25 29.5L29.5 14.75Z"

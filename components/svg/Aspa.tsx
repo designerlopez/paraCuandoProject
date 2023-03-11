@@ -1,4 +1,4 @@
-export default function Aspa(props) {
+export default function Aspa(props: any) {
   return (
     <svg
       width={15}

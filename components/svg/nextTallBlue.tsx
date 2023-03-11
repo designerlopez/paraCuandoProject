@@ -1,4 +1,6 @@
-export default function nextTallBlue(props) {
+import { SVGProps } from 'react';
+
+export default function nextTallBlue(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={307}

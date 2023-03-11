@@ -1,4 +1,11 @@
-export default function UserLogeado(props) {
+import { SVGProps } from 'react';
+
+/**
+ *Es un componente para el usuario login
+ * @param props
+ * @returns
+ */
+export default function UserLogeado(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={34}
@@ -21,5 +28,5 @@ export default function UserLogeado(props) {
         </clipPath>
       </defs>
     </svg>
-  )
+  );
 }

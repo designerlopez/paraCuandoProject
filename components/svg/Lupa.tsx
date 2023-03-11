@@ -1,4 +1,6 @@
-export default function Lupa(props) {
+import { SVGProps } from 'react';
+
+export default function Lupa(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={18}
