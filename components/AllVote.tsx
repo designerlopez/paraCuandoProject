@@ -1,19 +1,26 @@
 import { useState } from 'react';
 import LoginCard from './LoginCard';
-import Aspa from './svg/Aspa';
 import CircleAspa from './svg/CircleAspa';
 
 export default function AllVote() {
   const [showLoginCard, setShowLoginCard] = useState(false);
+  const [closeAllVote, setCloseAllVote] = useState(false);
 
   const handleFormLoginClick = () => {
     setShowLoginCard(true);
   };
 
   const handleFormClose = () => {
-    setShowLoginCard(false);
+    setCloseAllVote(true);
   };
 
+  if (closeAllVote) {
+    return null;
+  }
+
+  if (showLoginCard) {
+    return <LoginCard />;
+  }
   return (
     <div className="fixed top-[100px] right-9 bg-app-gray-form h-[529px] w-[378px] m-0 p-0 rounded-[20px] opacity-90 z-40">
       <div
@@ -21,7 +28,6 @@ export default function AllVote() {
         onClick={handleFormClose}
       >
         <CircleAspa />
-        <Aspa className="absolute top-2 right-2" />
       </div>
       <div className="absolute top-[171px] right-10 flex flex-col gap-4">
         <h2 className="font-roboto text-[32px] not-italic leading-10 font-bold">
@@ -44,8 +50,6 @@ export default function AllVote() {
           </p>
         </div>
       </div>
-
-      {showLoginCard && <LoginCard />}
     </div>
   );
 }

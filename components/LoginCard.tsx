@@ -1,13 +1,25 @@
 import Link from 'next/link';
-import Aspa from './svg/Aspa';
+import { useState } from 'react';
 import CircleAspa from './svg/CircleAspa';
 
 export default function LoginCard() {
+  const [closeLogin, setCloseLogin] = useState(false);
+
+  const handleFormClose = () => {
+    setCloseLogin(true);
+  };
+
+  if (closeLogin) {
+    return null;
+  }
+
   return (
     <div className="fixed top-20 right-9 bg-app-blackLight h-[449px] w-[386px] m-0 p-0 rounded-lg opacity-90 z-40 grid place-items-center">
-      <div className="absolute top-4 right-4">
+      <div
+        className="absolute top-4 right-4 cursor-pointer"
+        onClick={handleFormClose}
+      >
         <CircleAspa />
-        <Aspa className="absolute top-2 right-2" />
       </div>
       <div className="grid gap-3 m-4 mx-8">
         <div>
